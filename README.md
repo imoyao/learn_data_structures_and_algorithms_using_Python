@@ -26,8 +26,15 @@
 
 ## Algorithms-Python
 
-github trending,暂时没有发现中文版。
+来自 github trending ,暂时没有发现中文版。
 
 [Algorithms-Python](https://github.com/TheAlgorithms/Python)
+
+## Data Structures and Algorithms in Python
+[Data Structures and Algorithms in Python](https://doc.lagout.org/programmation/python/Data%20Structures%20and%20Algorithms%20in%20Python%20[Goodrich,%20Tamassia%20&%20Goldwasser%202013-03-18].pdf)
+
+## 约定
+
+本仓库中代码全部使用`Python3`实现，使用`Linux`操作系统运行。
 
 >蜀之鄙有二僧，其一贫，其一富。贫者语于富者曰：“吾欲之南海，何如？”富者曰：“子何恃而往？”曰：“吾一瓶一钵足矣。”富者曰：“吾数年来欲买舟而下，犹未能也。子何恃而往？”越明年，贫者自南海还，以告富者。富者有惭色。
