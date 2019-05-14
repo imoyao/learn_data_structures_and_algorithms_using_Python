@@ -8,6 +8,12 @@
 
 [网友翻译版本-Gitbooks](https://facert.gitbooks.io/python-data-structure-cn/)
 
+## 数据结构与算法（基于 Python 语言）
+
+北大出品，[这里](http://www.math.pku.edu.cn/teachers/qiuzy/ds_python/courseware/index.htm)有教材幻灯片。
+
+[数据结构与算法（基于 Python 语言）](http://www.math.pku.edu.cn/teachers/qiuzy/ds_python/)
+
 ## 算法图解
 
 像小说一样有趣的算法入门书，科普入门向。
