@@ -1,4 +1,4 @@
-对使用 `Python` 学习数据结构和算法的资料进行收集，会列出英文原版，并尽量给出中文译本版。
+对使用 `Python` 学习数据结构和算法的资料进行收集并学习。对于外文资料，会列出英文原版，并尽量找到中文译文版。
 
 ## Problem Solving with Algorithms and Data Structures using Python
 
