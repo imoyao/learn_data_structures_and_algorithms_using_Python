@@ -1,28 +1,76 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Created by imoyao at 2019/5/13 18:33
+import os
+import sys
+
+try:
+    from ..util import utils
+except ValueError:
+    currpath = os.path.join(os.getcwd(), os.path.dirname(__file__))
+    relative_fp = os.path.dirname(currpath)
+    print(relative_fp)
+    sys.path.append(relative_fp)
+    from util import utils
 
 
-def binary_search(sorted_lists, wanted_item):
+@utils.show_time
+def binary_search_while(sorted_lists, wanted_item):
+    """
+    二分查找( while 实现)
+    :param sorted_lists: 有序数组
+    :param wanted_item: 需要查找的元素
+    :return: 索引值 / None
+    """
     low_index = 0
-    high_index = len(sorted_lists) - 1
-    count = 0
+    high_index = len(sorted_lists) - 1  # 查找范围为整个有序列表的索引
+    _count = 0
     while low_index <= high_index:
-        count += 1
-        mid_index = (low_index + high_index) // 2
-        # print(mid_index)
+        _count += 1
+        mid_index = (low_index + high_index) // 2  # py3中的整数除
         mid_item = sorted_lists[mid_index]
         if mid_item == wanted_item:
-            print('It takes {0} times to find {1} in index {2}'.format(count, wanted_item, mid_index))
-            return mid_item
+            print('It takes {0} times to find {1} in index {2}'.format(_count, wanted_item, mid_index))
+            return mid_index
+        elif mid_item < wanted_item:  # 如果猜的值小于目的值，则在大端继续查找
+            low_index = mid_index + 1
         else:
-            if mid_item < wanted_item:
-                low_index = mid_index + 1
-            else:
-                high_index = mid_index - 1
-    return None
+            high_index = mid_index - 1  # 否则，在小端查找
+    return None  # 没有找到，返回None
+
+
+count = 0
+
+
+@utils.show_time
+def binary_search_recurse(sorted_lists, wanted_item, low_index=0, high_index=None):
+    """
+    二分查找(递归实现)
+    :param sorted_lists: 有序序列
+    :param wanted_item: 查找的元素
+    :param low_index: 开始位索引
+    :param high_index: 结束位索引
+    :return: 索引值 / None
+    """
+    global count
+
+    if high_index is None:
+        high_index = len(sorted_lists) - 1
+
+    mid_index = (low_index + high_index) // 2
+    mid_item = sorted_lists[mid_index]
+    count += 1
+    if low_index > high_index:  # 注意此处，表示遍历序列，也没找到
+        return None
+    if mid_item < wanted_item:  # 猜值小于目的值，则在大端继续查找
+        return binary_search_recurse(sorted_lists, wanted_item, mid_index + 1, high_index)
+    elif mid_item > wanted_item:  # 小端查找
+        return binary_search_recurse(sorted_lists, wanted_item, low_index, mid_index - 1)
+
+    print('It takes {0} times to find {1} in index {2}'.format(count, wanted_item, mid_index))
+    return mid_index
 
 
 if __name__ == '__main__':
-    a = binary_search(list(range(100)), 50)
-    print('ret:', a)
+    print(binary_search_while(list(range(100)), 0))
+    print(binary_search_recurse(list(range(100)), 0, 0, len(list(range(100))) - 1))
