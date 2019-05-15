@@ -30,7 +30,7 @@ def binary_search_while(sorted_lists, wanted_item):
         mid_index = (low_index + high_index) // 2  # py3中的整数除
         mid_item = sorted_lists[mid_index]
         if mid_item == wanted_item:
-            print('It takes {0} times to find {1} in index {2}'.format(_count, wanted_item, mid_index))
+            print(f'It takes {_count} times to find {wanted_item} in index {mid_index}')
             return mid_index
         elif mid_item < wanted_item:  # 如果猜的值小于目的值，则在大端继续查找
             low_index = mid_index + 1
@@ -67,7 +67,7 @@ def binary_search_recurse(sorted_lists, wanted_item, low_index=0, high_index=Non
     elif mid_item > wanted_item:  # 小端查找
         return binary_search_recurse(sorted_lists, wanted_item, low_index, mid_index - 1)
 
-    print('It takes {0} times to find {1} in index {2}'.format(count, wanted_item, mid_index))
+    print(f'It takes {count} times to find {wanted_item} in index {mid_index}')
     return mid_index
 
 
