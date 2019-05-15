@@ -1,17 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Created by imoyao at 2019/5/13 18:33
-import os
+
+import pathlib
 import sys
 
-try:
-    from ..util import utils
-except ValueError:
-    currpath = os.path.join(os.getcwd(), os.path.dirname(__file__))
-    relative_fp = os.path.dirname(currpath)
-    print(relative_fp)
-    sys.path.append(relative_fp)
-    from util import utils
+util_p = pathlib.Path('..').resolve()
+sys.path.append(str(util_p))
+
+from util import utils
 
 
 @utils.show_time
