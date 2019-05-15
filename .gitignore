@@ -9,3 +9,6 @@
 
 # PyCharm .idea
 .idea/
+
+# dirs
+temps/
