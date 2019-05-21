@@ -82,7 +82,7 @@ c < log n < n < n * log n < n^2 < n^3 < 2^n < 3^n < n!
 | 算法                     | 时间复杂度 |         -       |      -          | 空间复杂度 |
 | -------------------------- | ----------- | -------------- | -------------- | ---------- |
 |                            | 最好      | 平均         | 最差         | 最差     |
-| 快速排序               | Ω(n log(n)) | Θ(n log(n))   | O(n^2)         | O(log(n))  |
+| 快速排序（Quicksort）  | Ω(n log(n)) | Θ(n log(n))   | O(n^2)         | O(log(n))  |
 | 归并排序（Mergesort） | Ω(n log(n)) | Θ(n log(n))   | O(n log(n))    | O(n)       |
 | Timsort                    | Ω(n)       | Θ(n log(n))   | O(n log(n))    | O(n)       |
 | 堆排序（Heapsort）    | Ω(n log(n)) | Θ(n log(n))   | O(n log(n))    | O(1)       |
