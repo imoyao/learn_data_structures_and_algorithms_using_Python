@@ -1,6 +1,8 @@
 对使用 `Python` 学习数据结构和算法的资料进行收集并学习。对于外文资料，会列出英文原版，并尽量找到中文译文版。
 
-## Problem Solving with Algorithms and Data Structures using Python
+## 书籍及资源
+
+### Problem Solving with Algorithms and Data Structures using Python
 
 [Problem Solving with Algorithms and Data Structures using Python-原版在线阅读](https://runestone.academy/runestone/static/pythonds/index.html)
 
@@ -8,19 +10,19 @@
 
 [网友翻译版本-Gitbooks](https://facert.gitbooks.io/python-data-structure-cn/)
 
-## 数据结构与算法（基于 Python 语言）
+### 数据结构与算法（基于 Python 语言）
 
 北大出品，[这里](http://www.math.pku.edu.cn/teachers/qiuzy/ds_python/courseware/index.htm)有教材幻灯片。
 
 [数据结构与算法（基于 Python 语言）](http://www.math.pku.edu.cn/teachers/qiuzy/ds_python/)
 
-## 算法图解
+### 算法图解
 
 像小说一样有趣的算法入门书，科普入门向。
 
 [算法图解-豆瓣](https://book.douban.com/subject/26979890/)
 
-## `Python` 算法与数据结构教程
+### `Python` 算法与数据结构教程
 
 含视频（收费），前知乎工程师写的。
 
@@ -30,14 +32,20 @@
 
 [python-algorithm](https://hujiaweibujidao.github.io/tags/algorithm/)
 
-## Algorithms-Python
+### Algorithms-Python
 
 来自 github trending ,暂时没有发现中文版。
 
 [Algorithms-Python](https://github.com/TheAlgorithms/Python)
 
-## Data Structures and Algorithms in Python
+### Data Structures and Algorithms in Python
 [Data Structures and Algorithms in Python](https://doc.lagout.org/programmation/python/Data%20Structures%20and%20Algorithms%20in%20Python%20[Goodrich,%20Tamassia%20&%20Goldwasser%202013-03-18].pdf)
+
+## 可视化
+
+- [数据结构和算法动态可视化 (中文)](https://visualgo.net/zh)
+- [Data Structure Visualizations-旧金山大学](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
+- [Algorithm Visualizer](https://algorithm-visualizer.org/)
 
 ## 约定
 
@@ -54,6 +62,7 @@ Codename:	bionic
 imoyao@local:~$ uname -a
 
 Linux local 4.15.0-22-generic #24-Ubuntu SMP Wed May 16 12:15:17 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+
 ```
 
 >蜀之鄙有二僧，其一贫，其一富。贫者语于富者曰：“吾欲之南海，何如？”富者曰：“子何恃而往？”曰：“吾一瓶一钵足矣。”富者曰：“吾数年来欲买舟而下，犹未能也。子何恃而往？”越明年，贫者自南海还，以告富者。富者有惭色。
