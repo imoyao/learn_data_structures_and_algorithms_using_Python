@@ -97,6 +97,24 @@ c < log n < n < n * log n < n^2 < n^3 < 2^n < 3^n < n!
 | [Cubesort](http://en.wikipedia.org/wiki/Cubesort) | Ω(n)       | Θ(n log(n))   | O(n log(n))    | O(n)       |
 
 关于表格中的表示法，可以参考这篇文章。[算法分析——算法的渐进效率分析 和 渐进符号大O、大Ω、大θ、小o、小ω](https://blog.csdn.net/qq_28382071/article/details/80193541)
+## 注意
+
+算法复杂度只是用来描述该算法的复杂度，虽然很多时候我们忽略常量，但是有的时候常亮也可能影响很大。
+```python
+import time
+
+
+def foo(n):
+    for _ in range(n):
+        pass
+        
+def bar(n):
+    for _ in range(n):
+        time.sleep(1)
+        pass
+```
+虽然上述两个函数的复杂度均为`O(n)`,但是显然`bar()`更加耗时。具体可参考`《图解算法》- 4.3`章节。
+
 ## 更多
 
 [白话算法：时间复杂度和大O表示法](https://www.jianshu.com/p/59d09b9cee58)
