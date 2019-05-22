@@ -5,7 +5,7 @@
 import pathlib
 import sys
 
-util_p = pathlib.Path('..').resolve()
+util_p = pathlib.Path('../..').resolve()
 
 sys.path.append(str(util_p))
 from util import utils
