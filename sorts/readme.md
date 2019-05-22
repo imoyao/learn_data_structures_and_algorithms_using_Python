@@ -4,6 +4,7 @@
 
 - [选择排序](./selection_sort)
 - [快速排序](./quick_sort)
+- [冒泡排序](./bubble_sort)
 
 
 
