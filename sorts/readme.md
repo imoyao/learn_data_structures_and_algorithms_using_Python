@@ -6,6 +6,7 @@
 - [快速排序](./quick_sort)
 - [冒泡排序](./bubble_sort)
 - [插入排序](./insertion_sort)
+- [希尔排序](./shell_sort)
 
 
 
