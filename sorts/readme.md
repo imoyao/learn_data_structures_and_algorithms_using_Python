@@ -9,10 +9,8 @@
 <details>
 <summary><mark><font color=darkred>高级排序算法</font></mark></summary>
 
-    - [快速排序](./quick_sort)
-    
-    - [归并排序](./merge_sort)
-    
+  - [快速排序](./quick_sort)
+  - [归并排序](./merge_sort)
 </details>
 
 
