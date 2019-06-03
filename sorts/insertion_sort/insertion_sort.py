@@ -23,7 +23,7 @@ def insertion_sort(unsorted_collection):
         while index > 0 and unsorted_collection[index - 1] > unsorted_collection[index]:  # 前一个元素大于后一个元素
             unsorted_collection[index], unsorted_collection[index - 1] = unsorted_collection[index - 1], \
                                                                          unsorted_collection[index]
-            index -= 1      # 只保持前面已经排列的有序，这点和冒泡相反，冒泡每次排序都保证末端有序
+            index -= 1  # 只保持前面已经排列的有序，这点和冒泡相反，冒泡每次排序都保证末端有序
     return unsorted_collection
 
 
