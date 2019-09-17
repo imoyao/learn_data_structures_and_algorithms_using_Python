@@ -27,7 +27,7 @@
 - 在递归调用的过程当中系统为每一层的返回点、局部量等开辟了栈来存储。递归次数过多容易造成`栈溢出`等，所以一般不提倡用递归算法设计程序。
 
 表现在 `Python` 语言中，即为报错信息`RecursionError: maximum recursion depth exceeded in comparison.`
-默认递归深度为 1000 ，我们可以通过修改下面的代码设置调节，但是通常不建议这样操作。（效率太低）
+默认递归深度为 1000 ，我们可以通过修改下面的代码设置调节，但是**通常不建议这样操作**。（效率太低）
 ```python
 import sys
 sys.setrecursionlimit(100000)
@@ -62,7 +62,7 @@ def look_for_key_with_recursion(big_box):
 
 # **尾递归**
 
-在函数返回的时候，调用自身本身，并且，return语句不能包含表达式。
+在函数返回的时候，调用自身本身，并且，`return`语句不能包含表达式。
 
 ```python
 def bar():
@@ -73,7 +73,8 @@ def foo():
 ```
 上面代码中，函数`foo()`的最后一步是调用函数`bar()`，这就叫尾调用。
 具体实现见[代码](./recursion.py)中的`tail_recursion_fact()`函数。
-`Python`解释器也没有做优化，所以，即使把上面的`factorial(n)`函数改成尾递归方式的`tail_recursion_fact()`，也会导致栈溢出。
+
+`Python`解释器没有做优化，所以，即使把上面的`factorial(n)`函数改成尾递归方式的`tail_recursion_fact()`，也会导致栈溢出。
 
 通过特殊的装饰器，我们也可以实现[Python开启尾递归优化](https://segmentfault.com/a/1190000007641519),详见代码中的`tail_call_optimized()`函数。
 

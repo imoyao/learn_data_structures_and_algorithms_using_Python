@@ -7,7 +7,8 @@
 - 弹夹（先压入的最后射出）
 - 摞在一起的餐碟
 
-![羽毛球杯](./img/stack-example.jpg)
+![羽毛球杯](./img/stack-example.jpg)    
+
 （我们假设杯子只有顶端可以放入和取出）
 
 ## 操作
@@ -31,7 +32,7 @@
 | s.size()      | [4,'dog']          | 2      |                    |
 
 ## 代码实现
-[stack](stack.py)
+[基于list实现stack](list_stack.py)
 
 ## 其他
 常与另一种有序的线性数据`队列`相提并论。
