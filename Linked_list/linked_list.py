@@ -104,41 +104,54 @@ class LinkedList:
         prev = None
         current = self.head
         while current:
-            _next_node = current.next  # 获取当前节点的下一个节点
-            current.next = prev  # 当前节点指向前一个节点
-            prev = current  # 前一个节点变成本节点
-            current = _next_node  # 本节点变成下一个节点
+            _temp = current.next  # 对当前节点的下一个节点赋值
+            current.next = prev  # 反转当前节点的下一个节点指向前一节点
+            prev = current  # 前一个节点变成当前节点
+            current = _temp  # 节点偏移/迭代
         self.head = prev  # 原来的链表头指向None
+
+    def __iter__(self):
+        node = self.head
+        while node:
+            yield node.data
+            node = node.next
 
 
 def main():
-    A = LinkedList()
-    print("Inserting 1st at Head")
-    a1 = input()
-    A.insert_head(a1)
-    print("Inserting 2nd at Head")
-    a2 = input()
-    A.insert_head(a2)
-    print("\nPrint List : ")
-    A.show_node_data()
-    print("\nInserting 1st at Tail")
-    a3 = input()
-    A.insert_tail(a3)
-    print("Inserting 2nd at Tail")
-    a4 = input()
-    A.insert_tail(a4)
-    print("\nPrint List : ")
-    A.show_node_data()
-    print("\nDelete Head")
-    A.delete_head()
-    print("Delete Tail")
-    A.delete_tail()
-    print("\nPrint List : ")
-    A.show_node_data()
-    print("\nReverse Linked List")
-    A.reverse()
-    print("\nPrint List : ")
-    A.show_node_data()
+    link_list = LinkedList()
+    for i in range(10):
+        link_list.insert_tail(i)
+    link_list.show_node_data()
+    print('=====reverse it======')
+    link_list.reverse()
+    link_list.show_node_data()
+    ########################
+    # print("Inserting 1st at Head")
+    # a1 = input()
+    # link_list.insert_head(a1)
+    # print("Inserting 2nd at Head")
+    # a2 = input()
+    # link_list.insert_head(a2)
+    # print("\nPrint List : ")
+    # link_list.show_node_data()
+    # print("\nInserting 1st at Tail")
+    # a3 = input()
+    # link_list.insert_tail(a3)
+    # print("Inserting 2nd at Tail")
+    # a4 = input()
+    # link_list.insert_tail(a4)
+    # print("\nPrint List : ")
+    # link_list.show_node_data()
+    # print("\nDelete Head")
+    # link_list.delete_head()
+    # print("Delete Tail")
+    # link_list.delete_tail()
+    # print("\nPrint List : ")
+    # link_list.show_node_data()
+    # print("\nReverse Linked List")
+    # link_list.reverse()
+    # print("\nPrint List : ")
+    # link_list.show_node_data()
 
 
 if __name__ == '__main__':

@@ -39,11 +39,11 @@
 
 像小说一样有趣的算法入门书，科普入门向。
 
-[算法图解-豆瓣](https://book.douban.com/subject/26979890/)
+[算法图解-豆瓣](https://book.douban.com/subject/26979890/)    
 
-### `Python` 算法与数据结构教程
+~~### `Python`算法与数据结构教程~~
 
-含视频（收费），前知乎工程师写的。
+~~含视频（收费），前知乎工程师写的。~~
 
 [`Python` 算法与数据结构教程-readthedocs](https://python-data-structures-and-algorithms.readthedocs.io/zh/latest/)
 
