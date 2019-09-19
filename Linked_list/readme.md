@@ -43,6 +43,11 @@ data|next
 ![原来的链表头最后移动到表尾](./img/reverse_linked_list_head_last.gif)
     
 3. 递归(相信我们都熟悉的一点是，对于树的大部分问题，基本可以考虑用递归来解决。但是我们不太熟悉的一点是，对于单链表的一些问题，也可以使用递归。可以认为单链表是一颗永远只有左(右)子树的树，因此可以考虑用递归来解决。或者说，因为单链表本身的结构也有自相似的特点，所以可以考虑用递归来解决)
+### 查找链表中间节点
+参见[linked_list.find_middle_node()](./linked_list.py)方法  
+[思路](https://segmentfault.com/a/1190000016673724)   
+[解法](https://blog.csdn.net/fuxuemingzhu/article/details/81748484)
+   
 --- 
 # 双向链表
 ## 概念

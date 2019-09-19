@@ -24,6 +24,12 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
+    def __iter__(self):
+        node = self.head
+        while node:
+            yield node.data
+            node = node.next
+
     def is_empty(self):
         """
         链表头是None，则为空
@@ -111,11 +117,20 @@ class LinkedList:
             current = _temp  # 节点偏移/迭代
         self.head = prev  # 原来的链表头指向新的链表头
 
-    def __iter__(self):
-        node = self.head
-        while node:
-            yield node.data
-            node = node.next
+    @staticmethod
+    def find_middle_node(head):
+        """
+        查找链表中间节点（必须保证节点的数量最少是1，否则如果初始化是空的话fast.next会报错。）
+        定义快慢两个指针，快的走两步，慢的走一步；如果是奇数项，快的走到头，慢的刚好走到中间；
+        如果是偶数项，快的指向空，慢的刚好指向中间两项的后一项
+        :param head: 链表头
+        :return:
+        """
+        slow, fast = head, head
+        fast = fast.next if fast else None
+        while fast and fast.next:
+            slow, fast = slow.next, fast.next.next
+        return slow
 
 
 def main():
@@ -161,5 +176,16 @@ def main():
     # link_list.show_node_data()
 
 
+def find_mid():
+    link = LinkedList()
+    n1 = Node(1)
+    n2 = Node(2, n1)
+    n3 = Node(3, n2)
+    n4 = Node(4, n3)
+    n5 = Node(5, n4)
+    print(link.find_middle_node(n5))
+
+
 if __name__ == '__main__':
-    main()
+    # main()
+    find_mid()
