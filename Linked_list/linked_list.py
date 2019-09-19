@@ -104,11 +104,12 @@ class LinkedList:
         prev = None
         current = self.head
         while current:
-            _temp = current.next  # 对当前节点的下一个节点赋值
-            current.next = prev  # 反转当前节点的下一个节点指向前一节点
-            prev = current  # 前一个节点变成当前节点
+            # _temp = current.next  # 对当前节点的下一个节点赋值
+            # current.next = prev  # 反转当前节点的下一个节点指向前一节点
+            # prev = current  # 前一个节点变成当前节点
+            _temp, current.next, prev = current.next, prev, current
             current = _temp  # 节点偏移/迭代
-        self.head = prev  # 原来的链表头指向None
+        self.head = prev  # 原来的链表头指向新的链表头
 
     def __iter__(self):
         node = self.head
@@ -122,8 +123,14 @@ def main():
     for i in range(10):
         link_list.insert_tail(i)
     link_list.show_node_data()
-    print('=====reverse it======')
+    print('==before===insert head======')
+    for i in range(10, 20):
+        link_list.insert_head(str(i))
+    link_list.show_node_data()
+    link_list.delete_head()
+    print('==before===reverse it======')
     link_list.reverse()
+    link_list.delete_tail()
     link_list.show_node_data()
     ########################
     # print("Inserting 1st at Head")
