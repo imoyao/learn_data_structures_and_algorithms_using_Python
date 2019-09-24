@@ -10,7 +10,7 @@ class Node:
 
     def __init__(self, data, next_node=None):
         self.data = data
-        self.next = next_node
+        self.next_node = next_node
 
     def __repr__(self):
         return str(self.data)
@@ -28,7 +28,7 @@ class LinkedList:
         node = self.head
         while node:
             yield node.data
-            node = node.next
+            node = node.next_node
 
     def is_empty(self):
         """
@@ -45,7 +45,7 @@ class LinkedList:
         """
         new_node = Node(data)  # 初始化节点
         if self.head is not None:
-            new_node.next = self.head  # 节点指向原来的头
+            new_node.next_node = self.head  # 节点指向原来的头
         self.head = new_node  # 该节点作为节点头
 
     def insert_tail(self, data):
@@ -58,9 +58,9 @@ class LinkedList:
             self.insert_head(data)
         else:
             temp = self.head  # 有头，顺着链表一直往下找，找到最后，将该节点作为最后节点
-            while temp.next:
-                temp = temp.next
-            temp.next = Node(data)
+            while temp.next_node:
+                temp = temp.next_node
+            temp.next_node = Node(data)
 
     def show_node_data(self):
         """
@@ -71,7 +71,7 @@ class LinkedList:
         _temp = self.head
         while _temp is not None:
             print(_temp.data)
-            _temp = _temp.next
+            _temp = _temp.next_node
 
     def delete_head(self):
         """
@@ -81,8 +81,8 @@ class LinkedList:
         """
         _temp = self.head
         if self.head is not None:
-            self.head = self.head.next
-            _temp.next = None
+            self.head = self.head.next_node
+            _temp.next_node = None
         return _temp
 
     def delete_tail(self):
@@ -92,14 +92,14 @@ class LinkedList:
         """
         _temp = self.head
         if self.head is not None:  # 如果头不是None,如果头的指向为空，则删除尾即为将头指向None
-            if self.head.next is None:
+            if self.head.next_node is None:
                 self.head = None
 
             else:
-                while _temp.next.next is not None:  # 当头的next的next不为空，则继续往下找，直到找到倒数第二个节点
-                    _temp = _temp.next
+                while _temp.next_node.next_node is not None:  # 当头的next的next不为空，则继续往下找，直到找到倒数第二个节点
+                    _temp = _temp.next_node
 
-                _temp.next, _temp = None, _temp.next  # 将倒数第二个节点的next指向None,该节点变为最后一个节点（a,b = b,a）
+                _temp.next_node, _temp = None, _temp.next_node  # 将倒数第二个节点的next指向None,该节点变为最后一个节点（a,b = b,a）
         return _temp
 
     def reverse(self):
@@ -110,11 +110,12 @@ class LinkedList:
         prev = None
         current = self.head
         while current:
-            # _temp = current.next  # 对当前节点的下一个节点赋值
-            # current.next = prev  # 反转当前节点的下一个节点指向前一节点
+            # _temp = current.next_node  # 对当前节点的下一个节点赋值
+            # current.next_node = prev  # 反转当前节点的下一个节点指向前一节点
             # prev = current  # 前一个节点变成当前节点
-            _temp, current.next, prev = current.next, prev, current
-            current = _temp  # 节点偏移/迭代
+            # current = _temp  # 节点偏移/迭代
+            '''The above code equate to the follow.'''
+            current.next_node, prev, current = prev, current, current.next_node
         self.head = prev  # 原来的链表头指向新的链表头
 
     @staticmethod
@@ -127,9 +128,9 @@ class LinkedList:
         :return:
         """
         slow, fast = head, head
-        fast = fast.next if fast else None
-        while fast and fast.next:
-            slow, fast = slow.next, fast.next.next
+        fast = fast.next_node if fast else None
+        while fast and fast.next_node:
+            slow, fast = slow.next_node, fast.next_node.next_node
         return slow
 
 
@@ -187,5 +188,5 @@ def find_mid():
 
 
 if __name__ == '__main__':
-    # main()
-    find_mid()
+    main()
+    # find_mid()
