@@ -47,8 +47,22 @@ data|next
 参见[linked_list.find_middle_node()](./linked_list.py)方法  
 [思路](https://segmentfault.com/a/1190000016673724)   
 [解法](https://blog.csdn.net/fuxuemingzhu/article/details/81748484)
-   
+
+### 判断回文
+#### 基本思路
+1. 把链表先拆分成left和right两部分，然后只对right部分进行逆序；
+2. 从left头节点和逆序后的right头节点开始遍历，一直往后遍历直到链表尾；
+3. 遍历过程中出现不相同的数据则不是回文的单链表，否则就是回文的单链表；
+#### 图解
+![1](img/whole_linked_list.webp)
+![2](img/split_to_2_side.webp)
+![3](img/reverse_linked_list.webp)
+![4](img/compare_linked_list.webp)
 --- 
+#### 代码实现
+
+[回文判断](./is_palindrome.py)
+
 # 双向链表
 ## 概念
 
