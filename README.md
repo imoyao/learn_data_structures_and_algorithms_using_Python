@@ -66,6 +66,9 @@
 - [Data Structure Visualizations-旧金山大学](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
 - [Algorithm Visualizer](https://algorithm-visualizer.org/)
 
+## 视频
+[Python 数据结构和算法](https://www.bilibili.com/video/av43431667)
+
 ## 约定
 
 本仓库中代码全部使用`Python3.6`实现，使用`Linux`操作系统运行。内页`readme`中的代码默认指同目录下`.py`文件中的代码片段。
