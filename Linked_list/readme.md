@@ -54,10 +54,10 @@ data|next
 2. 从left头节点和逆序后的right头节点开始遍历，一直往后遍历直到链表尾；
 3. 遍历过程中出现不相同的数据则不是回文的单链表，否则就是回文的单链表；
 #### 图解
-![1](img/whole_linked_list.webp)
-![2](img/split_to_2_side.webp)
-![3](img/reverse_linked_list.webp)
-![4](img/compare_linked_list.webp)
+![1](img/whole_linked_list.png)
+![2](img/split_to_2_side.png)
+![3](img/reverse_linked_list.png)
+![4](img/compare_linked_list.png)
 --- 
 #### 代码实现
 
