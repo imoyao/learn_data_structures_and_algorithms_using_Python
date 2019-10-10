@@ -15,6 +15,7 @@
 ## 图示
 
 ![冒泡排序算法](./img/Bubble_sort_animation.gif)
+
 从图中可以看到，冒泡只有最上面的会保证顺序排列，剩下的（未排序元素）是逐渐（向有序）“靠拢”的过程。
 
 ![冒泡排序实例](./img/bubble_sort_example.gif)

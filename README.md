@@ -1,7 +1,8 @@
 ## 目录
 
 ### 基本数据结构
-
+- [数组]()
+- [链表](./Linked_list)
 #### TODO:
 - [堆](./Heap)
 - [栈](./Stack)
@@ -11,6 +12,12 @@
 - [双端队列](./Deque)
 
 ### 基本排序算法
+- [快速排序](sorts/quick_sort)
+- [冒泡排序](sorts/bubble_sort)
+- [插入排序](sorts/insertion_sort)
+- [归并排序](sorts/merge_sort)
+- [选择排序](sorts/selection_sort)
+- [希尔排序](sorts/shell_sort)
 
 ### 其他数据结构
 #### TODO:

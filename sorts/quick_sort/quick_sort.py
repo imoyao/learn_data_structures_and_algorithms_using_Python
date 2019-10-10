@@ -23,6 +23,12 @@ def quick_sort(unsorted_collection):
     cmp_base = unsorted_collection[0]  # 取出第一个作为比较基准
     left_col = [item for item in unsorted_collection[1:] if item <= cmp_base]  # 如果希望降序排列，只需分治点两边调换即可
     right_col = [item for item in unsorted_collection[1:] if item > cmp_base]
+    '''
+    left_col = []
+    right_col = []
+    for item in unsorted_collection[1:]:
+        left_col.append(item) if item <= cmp_base else right_col.append(item)
+    '''
     return quick_sort(left_col) + [cmp_base] + quick_sort(right_col)  # 对左右两边的序列使用递归，之后拼接；注意中间的元素要“还原”
 
 
