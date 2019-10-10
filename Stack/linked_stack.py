@@ -9,9 +9,9 @@
 
 class Node:
 
-    def __init__(self, data, next=None):
+    def __init__(self, data, next_node=None):
         self.data = data
-        self._next = next
+        self.next_node = next_node
 
 
 class LinkedStack:
@@ -19,16 +19,16 @@ class LinkedStack:
     """
 
     def __init__(self):
-        self._top = None
+        self._head = None
         self._size = 0
 
     def __repr__(self):
-        current = self._top
+        current = self._head
         nums = []
         while current:
             nums.append(current.data)
-            current = current._next
-        ret = ','.join([str(num) for num in nums])
+            current = current.next_node
+        ret = ','.join([repr(num) for num in nums])
         return f'[{ret}]'
 
     def is_empty(self):
@@ -38,87 +38,40 @@ class LinkedStack:
         return self._size
 
     def push(self, item):
-        new_top = Node(item)
-        new_top._next = self._top
-        self._top = new_top
+        new_head = Node(item)
+        new_head.next_node = self._head
+        self._head = new_head
         self._size += 1
 
     def pop(self):
         if not self._size:
             print('Stack Overflow')
         else:
-            item = self._top.data
-            self._top = self._top._next
+            item = self._head.data
+            self._head = self._head.next_node
             return item
 
     def top(self):
+        """
+        返回栈顶元素
+        :return: 
+        """
         if not self._size:
             print('Stack Overflow.')
         else:
-            return self._top.data
+            return self._head.data
 
 
-s = LinkedStack()
-print(s.is_empty())
-s.push(4)
-print(s)
-s.push('dog')
-print(s)
-# print(s.peek())
-s.push(True)
-print(s)
-print(s.size())
-print(s.is_empty())
-print(s)
-
-# class LinkedStack:
-#     """
-#     基于单链表的栈实现
-#     """
-#
-#     def __init__(self):
-#         self._top = None
-#         self._num = 0
-#
-#     def is_empty(self):
-#         return self._num == 0
-#
-#     def size(self):
-#         return self._num
-#
-#     # def __repr__(self):
-#     #     current = self._top
-#     #     nums = []
-#     #     while current:
-#     #         nums.append(current._data)
-#     #         current = current._next
-#     #     return ' '.join(f'{num}' for num in nums)
-#
-#     def push(self, value):
-#         new_top = Node(value)
-#         new_top._next = self._top
-#         self._top = new_top
-#         self._num += 1
-#
-#     def pop(self):
-#         if not self._num:
-#             print('The length of stack is 0.')
-#         else:
-#             item = self._top._data
-#             self._top = self._top.next
-#             return item
-#
-#
-# if __name__ == '__main__':
-#     s = LinkedStack()
-#     print(s.is_empty())
-#     s.push(4)
-#     print(s)
-#     s.push('dog')
-#     print(s)
-#     # print(s.peek())
-#     s.push(True)
-#     print(s)
-#     print(s.size())
-#     print(s.is_empty())
-#     print(s)
+if __name__ == '__main__':
+    s = LinkedStack()
+    print(s.is_empty())
+    s.push(4)
+    print(s)
+    s.push('dog')
+    print(s)
+    print(s.top())
+    s.push(True)
+    print(s)
+    print(s.size())
+    print(s.is_empty())
+    print(s.pop())

@@ -60,7 +60,7 @@ class LinkedListStack(object):
         return self._data.remove_first()
 
     def peek(self):
-        if self._data.is_empty():  ####以后在写链表的时候要注意边界情况
+        if self._data.is_empty():  # 以后在写链表的时候要注意边界情况
             return None
         return self._data.get_first()
 
@@ -118,14 +118,14 @@ class WebViewList(object):
         self._stackB = Stack()
 
     def forward(self):
-        if self._stackB.size() == 0:  ###此处是0，原因是
+        if self._stackB.size() == 0:  # 此处是0，原因是
             return None
         url = self._stackB.pop()
         self._stackA.push(url)
         return self._stackA.peek()
 
     def back(self):
-        if self._stackA.size() == 1:  ###此处是1 ，原因是退到最后一个页面无法再推
+        if self._stackA.size() == 1:  # 此处是1 ，原因是退到最后一个页面无法再退
             return None
         url = self._stackA.pop()
         self._stackB.push(url)

@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Created by imoyao at 2019/6/10 17:18
+"""
+此为使用Python的list模拟栈
+"""
 
 
 class Stack:

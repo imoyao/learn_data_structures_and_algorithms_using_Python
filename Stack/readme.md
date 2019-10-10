@@ -32,8 +32,11 @@
 | s.size()      | [4,'dog']          | 2      |                    |
 
 ## 代码实现
-[基于list实现stack](list_stack.py)
+[基于`list`实现`stack`](list_stack.py)  
+[基于单链表实现`stack`](linked_stack.py)
 
 ## 其他
 常与另一种有序的线性数据`队列`相提并论。
 ## 更多
+- 中缀表达式转化为后缀表达式
+- 中缀表达式转化为前缀表达式

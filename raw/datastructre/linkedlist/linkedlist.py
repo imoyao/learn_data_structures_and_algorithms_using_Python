@@ -88,7 +88,7 @@ class LinkedList:
         return p
 
 
-######  实现两个有序的链表合并为一个有序链表
+#  实现两个有序的链表合并为一个有序链表
 
 def combine(l1, l2):
     if l1 is None and l2 is None:
