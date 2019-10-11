@@ -1,15 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Created by imoyao at 2019/6/10 18:34
-import pathlib
-import sys
-
-util_p = pathlib.Path('../').resolve()
-sys.path.append(str(util_p))
-from queue import Queue
 
 
-def hot_potato(name_lists, num):        # TODO:待验证
+from Queue.queue import Queue
+
+
+def hot_potato(name_lists, num):  # TODO:待验证
     """
     假设拿着土豆的孩子位于队首，当开始传递土豆时，模拟器会将那个孩子从队首移出队列然后立即让他从队尾进入队列。所有在他前面的人都
     轮过一遍后才会再次轮到他传土豆。每经过'num'次出队入队的过程后，站在队首的孩子就会永久离开队列，游戏将在新的圆圈中继续进行。
