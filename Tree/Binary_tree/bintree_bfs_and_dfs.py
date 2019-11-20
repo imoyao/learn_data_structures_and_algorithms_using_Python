@@ -118,7 +118,7 @@ class BinTreeStack:
     """
 
     def __init__(self, root=None):
-        # super().__init__(root)  # python3
+        super().__init__(root)  # python3
         # super(BinTreeStack, self).__init__(root)  # python2
         self.root = root
         self.stack = []
