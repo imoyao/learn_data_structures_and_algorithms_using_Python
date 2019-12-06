@@ -20,7 +20,7 @@ class Queue:
         """
         return str(self.__items)
 
-    def isEmpty(self):
+    def is_empty(self):
         return self.__items == []
 
     def enqueue(self, new_item):
@@ -36,7 +36,7 @@ class Queue:
         出队
         :return:
         """
-        if not self.isEmpty():
+        if not self.is_empty():
             return self.__items.pop()
         return
 
