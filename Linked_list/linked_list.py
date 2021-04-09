@@ -114,7 +114,7 @@ class LinkedList:
             # current.next_node = prev  # 反转当前节点的下一个节点指向前一节点
             # prev = current  # 前一个节点变成当前节点
             # current = _temp  # 节点偏移/迭代
-            '''The above code equate to the follow.'''
+            '''The above code equals to the follow.'''
             current.next_node, prev, current = prev, current, current.next_node
         self.head = prev  # 原来的链表头指向新的链表头
 
