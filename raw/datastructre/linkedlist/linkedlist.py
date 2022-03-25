@@ -111,11 +111,11 @@ def combine(l1, l2):
 
 # leetcode 876 链表的中间结点 python实现
 class Solution:
-    def middleNode(self, head):
+    def middle_node(self, head):
         # 首先要知道链表一共有多少个结点
         count = 0
         res = {}
-        while head != None:
+        while head is not None:
             count += 1
             res[count] = head
             head = head.next
