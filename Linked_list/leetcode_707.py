@@ -35,6 +35,9 @@ class Node:
 
 
 class NodeList:
+    """
+    带头结点 哨兵头
+    """
 
     def __init__(self):
         self.size = 0
